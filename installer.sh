@@ -12,6 +12,8 @@ fi
 
 if [ $PYTHON = "PY3" ]; then
    opkg update && opkg upgrade
+   opkg install astra-sm 
+   opkg install dvbsnoop
    opkg install p7zip
    opkg install wget 
    opkg install curl  
@@ -49,8 +51,8 @@ if [ $PYTHON = "PY3" ]; then
    opkg install gstreamer1.0-plugins-bad
 else
    opkg update && opkg upgrade
-   opkg update
-   opkg install 
+   opkg install astra-sm 
+   opkg install dvbsnoop 
    opkg install wget 
    opkg install curl  
    opkg install hlsdl 
@@ -98,4 +100,5 @@ reboot
 wait
 sleep 2;
 exit 0
+
 
